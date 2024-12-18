@@ -10,11 +10,11 @@ class Settings(BaseSettings):
     PROJECT_VERSION: str = '0.0.1'
 
     # POSTGRES CREDENTIALS
-    POSTGRES_PASSWORD: str
     POSTGRES_USER: str
-    POSTGRES_NAME: str
+    POSTGRES_PASSWORD: str
+    POSTGRES_DB: str
     POSTGRES_HOST: str
-    POSTGRES_PORT: str
+    POSTGRES_PORT: int
 
     model_config = SettingsConfigDict(env_file='.env')
 
